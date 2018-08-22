@@ -8,7 +8,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 public class RadioStationApplication {
-//Main class comments
+//Main class comment
 	public static void main(String[] args) {
 		SpringApplication.run(RadioStationApplication.class, args);
 	}
