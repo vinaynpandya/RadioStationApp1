@@ -56,5 +56,12 @@ public class  StationController {
 	public boolean deleteCustomber(@PathVariable(value="stationid") int stationid) {
 		return stationService.deleteStation(stationid);
 	}
+	
+	@GetMapping("/stations/hd")
+	@ApiOperation(value = "Get  HdEnable Stations.")
+	public List<StationInfo> getStationsByHD() {
+		return stationService.getStationsByHD();
+	}
+
 
 }

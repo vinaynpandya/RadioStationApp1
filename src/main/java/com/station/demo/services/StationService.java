@@ -115,5 +115,21 @@ public class StationService {
 			return true;			
 		}
 	}
+	
+	/**
+	 * Get HDEnabled Stations 
+	 * @return HDEnabled Stations
+	 */
+	public List<StationInfo> getStationsByHD() {
+		// TODO Auto-generated method stub
+		List<StationInfo> Stations = new ArrayList<>();
+		
+		for (StationEntity Station : stationrepository.getStationsByHD()) 
+		{
+		Stations.add(new StationInfo(Station.getStationid(),Station.getCallSign(),Station.isHdEnabaled(),Station.getName()));
+		}
+		return Stations;
+		
+	}
 
 }
